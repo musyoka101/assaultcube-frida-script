@@ -1,0 +1,18 @@
+{
+  "name": "assaultcube-frida-script",
+  "version": "1.0.0",
+  "description": "Frida script for analyzing and modifying AssaultCube game behavior",
+  "private": false,
+  "main": "agent/index.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "frida-compile agent/index.ts -o _agent.js -c",
+    "watch": "frida-compile agent/index.ts -o _agent.js -w"
+  },
+  "devDependencies": {
+    "@types/frida-gum": "^19.0.0",
+    "@types/node": "^18.19.112",
+    "frida-compile": "^19.0.4",
+    "frida-java-bridge": "^7.0.4"
+  }
+}
